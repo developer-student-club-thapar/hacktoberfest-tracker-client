@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "components",
+			"path": "../../../Projects/Web Dev/Analyzer/hacktoberfest-tracker-client/components"
+		},
+		{
+			"name": "hacktoberfest-tracker-client",
+			"path": ".."
+		}
+	],
+	"settings": {}
+}
