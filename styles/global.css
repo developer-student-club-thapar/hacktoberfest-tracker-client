@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body{
+    background-color: #f4f4f4;
+}
+
+.shadowProfile{
+    filter: drop-shadow(0px 229px 92px rgba(0, 0, 0, 0.01)) drop-shadow(0px 129px 77px rgba(0, 0, 0, 0.03)) drop-shadow(0px 57px 57px rgba(0, 0, 0, 0.06)) drop-shadow(0px 14px 31px rgba(0, 0, 0, 0.07)) drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.07));
+}
