@@ -24,7 +24,7 @@ const Access = () => {
             return response.json()
         }).then((data) => {
             if(data.verified == true){
-                router.push("/dashboard/"+username)
+                router.push("/index/"+username)
             }    
         }); 
     }
