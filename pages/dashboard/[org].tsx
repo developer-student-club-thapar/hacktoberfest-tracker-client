@@ -26,19 +26,19 @@ export default function Home() {
     });
 
     useEffect(() => {
-        // fetch(url,{
-        //     'method': 'GET',
-        //     'headers': {
-        //         Accept: 'application/json',
-        //     'Content-Type': 'application/json'
-        //     }
-        // }).then((response) => {
-        //     return response.json();
-        // }).then((data) => {
-        //     setData(data);
-        // }
-        // );
-        console.log(url);
+        fetch(url,{
+            'method': 'GET',
+            'headers': {
+                Accept: 'application/json',
+            'Content-Type': 'application/json'
+            }
+        }).then((response) => {
+            return response.json();
+        }).then((data) => {
+            setData(data);
+        }
+        );
+        // console.log(url);
         
     },[]);
 
