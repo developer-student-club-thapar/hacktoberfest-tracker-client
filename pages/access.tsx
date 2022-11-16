@@ -13,7 +13,7 @@ const Access = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const url = "https://localhost:3060/verify/"+username;
+        const url = "http://localhost:3060/verify/"+username;
         fetch(url,{
             'method': 'POST',
             'headers': {
@@ -24,10 +24,7 @@ const Access = () => {
             return response.json()
         }).then((data) => {
             if(data.verified == true){
-                router.push({
-                    pathname:"/dashboard",
-                    query:username
-                })
+                router.push("/dashboard/"+username)
             }    
         }); 
     }

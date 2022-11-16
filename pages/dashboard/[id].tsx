@@ -1,7 +1,7 @@
 import { useRouter } from "next/router"
 import { useEffect, useState } from "react"
-import Sidebar from "../components/sidebar/sidebarWrapper"
-import Top from "../components/top"
+import Sidebar from "../../components/sidebar/sidebarWrapper"
+import Top from "../../components/top"
 
 type repo = {
     "name":string,
@@ -14,13 +14,14 @@ type repo = {
 const Dashboard = () => {
 
     const router = useRouter();
-    const username = router.query;
+    const {id} = router.query;
+    const url = "http://localhost:3060/"+id
     const [data,setData] = useState({
         orgName:'',
         data:['']
     })
     useEffect(() => {
-        fetch("https://localhost:3060/"+username,{
+        fetch(url,{
             'method': 'GET',
             'headers': {
                 Accept: 'application/json',
@@ -32,6 +33,8 @@ const Dashboard = () => {
             setData(data);
         }
         );
+        // console.log(url);
+        
     },[]);
 
     return (
