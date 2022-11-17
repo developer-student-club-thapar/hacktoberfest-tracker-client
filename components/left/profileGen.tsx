@@ -12,11 +12,11 @@ const ProfileCard= ()=>{
             </div>
 
             <div className="flex flex-col items-center">
-                <h1 className="font-sans font-semibold text-2xl">Servatom</h1>
-                <h3 className="font-sans text-xl">Building Something Great!</h3>
+                <h1 className="font-sans font-semibold text-2xl">Servatom</h1> {/* org name */}
+                <h3 className="font-sans text-xl">Building Something Great!</h3>  {/* org description */}
                 <div className="flex flex-row gap-[10px] text-[20px]">
-                    <a href="https://google.com"><AiFillGithub /></a>
-                    <a href="https://google.com"><AiFillTwitterCircle /></a>
+                    <a href="https://google.com"><AiFillGithub /></a>       {/* org github link */}
+                    <a href="https://google.com"><AiFillTwitterCircle /></a>    {/* org social link, if available */}
                 </div>
             </div>
         </div>
