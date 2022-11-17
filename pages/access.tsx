@@ -11,7 +11,7 @@ const Access = () => {
         setUserName(e.target.value)
     }
 
-    const handleSubmit = (e) => {
+    const handleSubmit = (e: { preventDefault: () => void; }) => {
         e.preventDefault();
         const url = "http://localhost:3060/verify/"+username;
         fetch(url,{

@@ -1,5 +1,5 @@
 import Top from "../../components/top"
-import Left from "../../components/left"
+import Left from "../../components/left/left"
 import { useRouter } from "next/router"
 import { useEffect, useState } from "react"
 import Sidebar from "../../components/sidebar/sidebarWrapper"
