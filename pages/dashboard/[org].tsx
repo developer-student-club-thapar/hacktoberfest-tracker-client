@@ -1,5 +1,4 @@
 import Top from "../../components/top"
-import Left from "../../components/left/left"
 import { useRouter } from "next/router"
 import { useEffect, useState } from "react"
 import Sidebar from "../../components/sidebar/sidebarWrapper"
@@ -16,12 +15,17 @@ export default function Home() {
           orgName:'',
           orgDesc:''
         },
-        data:{
+        orgData:{
           commits:0,
           issues:0,
           contributors:0,
           repoCount:0,
-          repos:[]
+          repos:[{
+            name:'',
+            desc:'',
+            topics:[''],
+            link:''
+          }]
       }
     });
 
@@ -46,9 +50,9 @@ export default function Home() {
     <div className="flex flex-col">
       <Top/>
       <div className="flex flex-row w-screen">
-        <Sidebar orgName={data.org.orgName} data={data.data.repos}/>
+        <Sidebar orgName={data.org.orgName} data={data.orgData.repos}/>
         <div className="w-full flex flex-col">
-          <RepoList repoData={data.data.repos}/>
+          <RepoList repoData={data.orgData.repos}/>
         </div>
         {/* <Left/> */}
       </div>
