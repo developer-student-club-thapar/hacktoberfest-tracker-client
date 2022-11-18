@@ -1,5 +1,5 @@
 import Image from "next/image";
-import hacktober from '../public/hacktober.png';
+import hacktober from '../../public/hacktober.png';
 import { AiFillGithub, AiFillTwitterCircle } from 'react-icons/ai';
 
 const ProfileCard= ()=>{
