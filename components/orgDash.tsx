@@ -2,7 +2,7 @@
 
 const OrgDash = (props) => {
     return (
-        <div className="h-[40vh] flex flex-row gap-2 bg-componentLight p-6 rounded-lg drop-shadow-lg overflow-scroll">
+        <div className="h-[40vh] flex flex-row gap-2 bg-componentLight p-6 rounded-lg drop-shadow-lg">
             <div className="flex flex-col gap-4 w-2/4 h-full">
                 <div className="text-3xl bg-bgLight flex flex-col justify-center p-8 text-center rounded-lg h-2/4">
                     <h1 className="text-[#BC5C82]">{props.contributors}</h1>

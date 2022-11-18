@@ -10,7 +10,8 @@ import OrgDash from "../../components/orgDash"
 export default function Home() {
 
     const router = useRouter();
-    const {org} = router.query;
+    let {org} = router.query;
+
     const url = "http://localhost:3060/"+org;
     const [data,setData] = useState({
         org:{
@@ -53,7 +54,7 @@ export default function Home() {
       <Top/>
       <div className="h-[90vh] flex flex-row w-screen">
         <Sidebar orgName={data.org.orgName} data={data.orgData.repos}/>
-        <div className="w-[80vw] flex flex-col p-6 h-full">
+        <div className="w-[70vw] flex flex-col p-6 h-full">
           <h1 className="font-semibold font-sans text-4xl mb-4">Repositories</h1>
           <RepoList repoData={data.orgData.repos}/>
           <h1 className="font-semibold font-sans text-4xl my-4">Contributions</h1>
