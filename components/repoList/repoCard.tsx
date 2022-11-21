@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export default function Card(props) {
     return (
-        <div className='w-[16vw] drop-shadow-lg h-full rounded-lg bg-componentLight p-6 flex flex-col'>
+        <div className='w-[16vw] shadowProfile2 h-full rounded-lg bg-componentLight py-6 px-4 flex flex-col'>
             <div className='h-1/4 flex flex-row justify-between'>
                 <h1 className='text-xl font-semibold '>{props.name}</h1>
                 <a href={props.link} target="_blank"><FontAwesomeIcon icon={faLink}/></a>
