@@ -1,10 +1,10 @@
 import { useState } from "react";
 
-const List = ({name,index,check,setCheck}) => {
+const List = ({name,index,check,setCheck}:any) => {
 
     const [list,setList] = useState(false);
     
-    const handleClick = (e) => {
+    const handleClick = (e:any) => {
         if(index == check.key)
             setCheck({key:-1})
         else
@@ -17,7 +17,7 @@ const List = ({name,index,check,setCheck}) => {
     return (
         <div className="w-full flex flex-col items-start">
             <button className={check.key==index?s:u} onClick={handleClick} value={index} >{name.slice(0,1).toUpperCase()+name.slice(1,name.length)}</button>
-            {check.key==index?
+            {/* {check.key==index?
                 <div className="flex flex-col items-start">
                     <button className="font-light text-base py-1 px-2 bg-slate-300">Dashboard</button>
                     <button className="font-light text-base py-1 px-2 bg-slate-300">Issues</button>
@@ -25,7 +25,7 @@ const List = ({name,index,check,setCheck}) => {
                 </div>
             :
                 null
-            }
+            } */}
         </div>
 
     )
