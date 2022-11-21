@@ -1,6 +1,6 @@
 import ProfileCard from "./profileGen";
 
-const Left= ()=>{
+const Right= ()=>{
     return(
         <div className="flex flex-col h-full w-[25vw] items-end">
             <ProfileCard/>
@@ -8,4 +8,4 @@ const Left= ()=>{
     );
 }
 
-export default Left;
+export default Right;
