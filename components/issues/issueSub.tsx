@@ -17,7 +17,7 @@ export default function IssueSub ({issue}:any) {
                 <h1 className="text-lg text-semibold 2xl:text-xl">{issue.title}</h1>
                 <p className="text-sm text-[#f3f3f3]">/{issue.user}</p>
             </div>
-            <div className="text-sm ">
+            <div className="text-sm">
                 {issue.body.length>100?<p>{showMore?issue.body:issue.body.slice(0,100)}<button onClick={handleClick}>{showMore?"...less":"...more"}</button></p>:<p>{issue.body}</p>}
             </div>
             

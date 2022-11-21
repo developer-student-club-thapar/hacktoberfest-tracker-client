@@ -1,6 +1,19 @@
+import { ThreeCircles } from "react-loader-spinner";
 export default function Loading() {
     return (
-        <div className="absolute top-1/2 left-1/2 h-[2vh] w-[2vh] animate-spin h-20 z-10 border-solid border-ChinaRoseLight border-top-8 rounded-full backdrop-blur-xl">
+        <div className="h-screen w-screen flex items-center justify-center">
+            <ThreeCircles
+            height="200"
+            width="200"
+            color="#4fa94d"
+            wrapperStyle={{}}
+            wrapperClass=""
+            visible={true}
+            ariaLabel="three-circles-rotating"
+            outerCircleColor=""
+            innerCircleColor="#6FA4FC"
+            middleCircleColor="#BC5C82"
+/>
         </div>
     )
 }
