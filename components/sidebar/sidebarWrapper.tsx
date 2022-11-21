@@ -1,7 +1,7 @@
 import { useState } from "react";
 import List from "./repoNavigation";
 
-const Sidebar = ({orgName,data}:any) => {
+const Sidebar = ({orgName,data,setRepoData,setDisplayData}:any) => {
 
     const [highlight,setHighlight] = useState({
         key:data.length+1
@@ -11,7 +11,8 @@ const Sidebar = ({orgName,data}:any) => {
             setHighlight({key:-1})
         else
             setHighlight({key:data.length+1})
-
+        
+        setDisplayData(true)
     }
 
     const s='bg-navButtonLight text-[#fff] text-left text-xl w-full py-2 px-2';
@@ -26,7 +27,7 @@ const Sidebar = ({orgName,data}:any) => {
             <h3 className="ml-1 mb-1 mt-2 font-medium text-[#a3a3a3]">Repositories</h3>
             {data.map((repo:any,index:number) => {
                     return (
-                        <List name={repo.name} key={Math.random()} index={index} check={highlight} setCheck={setHighlight}/> 
+                        <List name={repo.name} key={Math.random()} index={index} check={highlight} setCheck={setHighlight} setRepoData={setRepoData} setDisplayData={setDisplayData}/> 
                     );
                 })
             }
