@@ -1,4 +1,3 @@
-import { useState } from "react";
 import {useRouter} from "next/router"
 
 const List = ({name,index,check,setCheck,setRepoData,setDisplayData}:any) => {

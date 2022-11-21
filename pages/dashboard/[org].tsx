@@ -81,7 +81,7 @@ export default function Home() {
       {load? <Loading/>:
           <div className="flex flex-col">
             <Top/>
-            <div className="h-[90vh] flex flex-row w-screen">
+            <div className="h-[90vh] flex flex-row w-screen justify-between">
               <Sidebar orgName={data.org.orgName} data={data.orgData.repos} setRepoData={setRepoData} setDisplayData={setPage}/>
               <Mid data={page?data:repoData} displayData={page}/>
               <Right orgName={data.org.orgName} orgDesc={data.org.orgDesc} orgLink={data.org.orgLink} contributors={data.orgData.repos}/>
