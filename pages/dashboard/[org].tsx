@@ -40,22 +40,22 @@ export default function Home() {
     });
 
     useEffect(() => {
-        fetch(url,{
-            'method': 'GET',
-            'headers': {
-                Accept: 'application/json',
-            'Content-Type': 'application/json'
-            }
-        }).then((response) => {
-            return response.json();
-        }).then((data) => {
-              setData(data);
+      fetch(url,{
+          'method': 'GET',
+          'headers': {
+              Accept: 'application/json',
+          'Content-Type': 'application/json'
+          }
+      }).then((response) => {
+          return response.json();
+      }).then((data) => {
+            setData(data);
             setLoading(false);
-        }
-        );
-        // console.log(url);
-        
-    },[]);
+      }
+      );
+      // console.log(url);
+      
+  },[]);
 
   return (
     <div>
@@ -65,7 +65,7 @@ export default function Home() {
             <div className="h-[90vh] flex flex-row w-screen">
               <Sidebar orgName={data.org.orgName} data={data.orgData.repos}/>
               <Mid data={data}/>
-              <Right orgName={data.org.orgName} orgDesc={data.org.orgDesc} orgLink={data.org.orgLink}/>
+              <Right orgName={data.org.orgName} orgDesc={data.org.orgDesc} orgLink={data.org.orgLink} contributors={data.orgData.repos}/>
             </div>
           </div>
       } 

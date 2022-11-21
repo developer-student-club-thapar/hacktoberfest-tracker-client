@@ -3,9 +3,9 @@ import ProfileCard from "./profileGen";
 
 const Right= (props:any)=>{
     return(
-        <div className="flex flex-col h-full w-[25vw] items-end">
+        <div className="flex flex-col h-full w-[35vw] items-end">
             <ProfileCard name={props.orgName} desc={props.orgDesc} link={props.orgLink}/>
-            <Contributors />
+            <Contributors contributors={props.contributors}/>
         </div>
     );
 }
