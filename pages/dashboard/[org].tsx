@@ -51,8 +51,12 @@ export default function Home() {
         }).then((response) => {
             return response.json();
         }).then((data) => {
-            setData(data);
+          if(data.response === "false request")
+            router.push("/access")
+            else{
+              setData(data);
             setLoading(false);
+            } 
         }
         );
         // console.log(url);
