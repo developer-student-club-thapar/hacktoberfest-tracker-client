@@ -12,6 +12,7 @@ export default function Home() {
     const router = useRouter();
     let {org} = router.query;
     const [load,setLoading] = useState(true);
+    const [page,setPage] = useState(true);
 
     const url = "http://localhost:3060/"+org;
     const [data,setData] = useState({
@@ -39,6 +40,24 @@ export default function Home() {
       }
     });
 
+    const [repoData,setRepoData] = useState({
+        totalCommits:0,
+        issues:[{
+          number:0,
+          title:"",
+          user:"",
+          body:""
+        }],
+        members:[{
+          name:"",
+          photo:"",
+          login:"",
+          contributions:""
+        }],
+        totalContributors:0,
+        totalIssues:0
+    })
+
     useEffect(() => {
       fetch(url,{
           'method': 'GET',
@@ -63,8 +82,8 @@ export default function Home() {
           <div className="flex flex-col">
             <Top/>
             <div className="h-[90vh] flex flex-row w-screen">
-              <Sidebar orgName={data.org.orgName} data={data.orgData.repos}/>
-              <Mid data={data}/>
+              <Sidebar orgName={data.org.orgName} data={data.orgData.repos} setRepoData={setRepoData} setDisplayData={setPage}/>
+              <Mid data={page?data:repoData} displayData={page}/>
               <Right orgName={data.org.orgName} orgDesc={data.org.orgDesc} orgLink={data.org.orgLink} contributors={data.orgData.repos}/>
             </div>
           </div>
