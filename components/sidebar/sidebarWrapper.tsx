@@ -1,7 +1,7 @@
 import { useState } from "react";
 import List from "./repoNavigation";
 
-const Sidebar = ({orgName,data}) => {
+const Sidebar = ({orgName,data}:any) => {
 
     const [highlight,setHighlight] = useState({
         key:data.length+1
@@ -18,7 +18,7 @@ const Sidebar = ({orgName,data}) => {
     const u='bg-componentLight text-[#000] text-left text-xl w-full py-2 px-2 ';
 
     return (
-        <div className='h-full w-[22vw] bg-componentLight flex flex-col py-7 shadowProfile rounded-xl'>
+        <div className='h-full w-[24vw] bg-componentLight flex flex-col py-7 shadowProfile rounded-xl'>
 
             <h3 className="ml-1 mb-1 font-medium text-[#a3a3a3]">Organisation</h3>
             <button className={highlight.key == data.length+1?s:u} onClick={handleClick}>{orgName}</button>

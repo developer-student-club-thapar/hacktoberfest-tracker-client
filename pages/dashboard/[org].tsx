@@ -4,8 +4,6 @@ import Right from "../../components/right/right"
 import Mid from"../../components/mid/mid";
 import { useEffect, useState } from "react"
 import Sidebar from "../../components/sidebar/sidebarWrapper"
-import RepoList from "../../components/repoList/repositoryList"
-import OrgDash from "../../components/mid/orgDash"
 import Loading from "../../components/loading"
 
 
