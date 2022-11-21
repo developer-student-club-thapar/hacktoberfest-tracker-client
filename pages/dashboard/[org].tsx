@@ -1,10 +1,11 @@
 import Top from "../../components/top"
 import { useRouter } from "next/router"
 import Right from "../../components/right/right"
+import Mid from"../../components/mid/mid";
 import { useEffect, useState } from "react"
 import Sidebar from "../../components/sidebar/sidebarWrapper"
 import RepoList from "../../components/repoList/repositoryList"
-import OrgDash from "../../components/orgDash"
+import OrgDash from "../../components/mid/orgDash"
 import Loading from "../../components/loading"
 
 
@@ -18,7 +19,8 @@ export default function Home() {
     const [data,setData] = useState({
         org:{
           orgName:'',
-          orgDesc:''
+          orgDesc:'',
+          orgLink:''
         },
         orgData:{
           commits:0,
@@ -29,7 +31,12 @@ export default function Home() {
             name:'',
             desc:'',
             topics:[''],
-            link:''
+            link:'',
+            topContributor:{
+              name:'',
+              photo:'',
+              contributions:''
+            }
           }]
       }
     });
@@ -59,13 +66,8 @@ export default function Home() {
             <Top/>
             <div className="h-[90vh] flex flex-row w-screen">
               <Sidebar orgName={data.org.orgName} data={data.orgData.repos}/>
-              <div className="w-[70vw] flex flex-col p-6 h-full">
-                <h1 className="font-semibold font-sans text-4xl mb-4">Repositories</h1>
-                <RepoList repoData={data.orgData.repos}/>
-                <h1 className="font-semibold font-sans text-4xl my-4">Contributions</h1>
-                <OrgDash commits={data.orgData.commits} contributors={data.orgData.contributors} repoCount={data.orgData.repoCount} issues={data.orgData.issues}/>
-              </div>
-              <Right/>
+              <Mid data={data}/>
+              <Right orgName={data.org.orgName} orgDesc={data.org.orgDesc}/>
             </div>
           </div>
       } 
