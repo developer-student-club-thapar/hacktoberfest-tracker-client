@@ -6,7 +6,7 @@ import servatom from '../public/servatom.png';
 
 const Top= ()=>{
     return (
-        <div className='flex px-32 py-3 w-full justify-between bg-componentLight align-middle mb-[5px]'>
+        <div className='flex px-32 py-3 w-full justify-between bg-componentLight align-middle mb-1 shadowProfile2'>
 
             <div className=''>
                 <a href='https://dsctiet.com/#/'>

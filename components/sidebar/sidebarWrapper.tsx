@@ -3,9 +3,8 @@ import List from "./repoNavigation";
 
 const Sidebar = ({orgName,data}) => {
 
-    const [selected, setSelected]= useState(true);
     const [highlight,setHighlight] = useState({
-        key:-1
+        key:data.length+1
     })
     const handleClick = () => {
         if(highlight.key == data.length+1)
@@ -20,7 +19,11 @@ const Sidebar = ({orgName,data}) => {
 
     return (
         <div className='h-full w-[22vw] bg-componentLight flex flex-col py-7 shadowProfile rounded-xl'>
+
+            <h3 className="ml-1 mb-1 font-medium text-[#a3a3a3]">Organisation</h3>
             <button className={highlight.key == data.length+1?s:u} onClick={handleClick}>{orgName}</button>
+
+            <h3 className="ml-1 mb-1 mt-2 font-medium text-[#a3a3a3]">Repositories</h3>
             {data.map((repo:any,index:number) => {
                     return (
                         <List name={repo.name} key={Math.random()} index={index} check={highlight} setCheck={setHighlight}/> 
