@@ -3,9 +3,8 @@ import List from "./repoNavigation";
 
 const Sidebar = ({orgName,data}) => {
 
-    const [selected, setSelected]= useState(true);
     const [highlight,setHighlight] = useState({
-        key:-1
+        key:data.length+1
     })
     const handleClick = () => {
         if(highlight.key == data.length+1)
