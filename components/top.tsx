@@ -9,14 +9,14 @@ const Top= ()=>{
         <div className='flex px-32 py-3 w-full justify-between bg-componentLight align-middle mb-1 shadowProfile2'>
 
             <div className=''>
-                <a href='https://dsctiet.com/#/'>
+                <a href='https://dsctiet.com/#/' target="_blank">
                     <Image src={DSClight} alt="dsc-logo" width={250}/>
                 </a>
             </div>
             
             <div className='flex gap-10'>
                 <Image src={hacktober} alt="hacktober-logo" width={50}/>
-                <a href='https://servatom.com/'>
+                <a href='https://servatom.com/' target="_blank">
                     <Image src={servatom} alt="servatom-logo" width={50}/>
                 </a>
             </div>
