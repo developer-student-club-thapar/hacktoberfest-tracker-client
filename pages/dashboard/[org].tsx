@@ -1,6 +1,6 @@
 import Top from "../../components/top"
 import { useRouter } from "next/router"
-import Left from "../../components/left/left"
+import Right from "../../components/right/right"
 import { useEffect, useState } from "react"
 import Sidebar from "../../components/sidebar/sidebarWrapper"
 import RepoList from "../../components/repoList/repositoryList"
@@ -65,7 +65,7 @@ export default function Home() {
                 <h1 className="font-semibold font-sans text-4xl my-4">Contributions</h1>
                 <OrgDash commits={data.orgData.commits} contributors={data.orgData.contributors} repoCount={data.orgData.repoCount} issues={data.orgData.issues}/>
               </div>
-              <Left/>
+              <Right/>
             </div>
           </div>
       } 
