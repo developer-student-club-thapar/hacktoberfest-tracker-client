@@ -12,7 +12,7 @@ const ProfileCard= (props:any)=>{
             </div>
 
             <div className="flex flex-col items-center">
-                <a href={props.link}> {/* org link */}
+                <a href={props.link} target="_blank"> 
                     <h1 className="font-sans font-semibold underline-offset-2 text-xl text-center mb-2">{props.name}</h1> 
                 </a>
                 <h3 className="font-sans text-md text-center mb-1">{props.desc}</h3>  

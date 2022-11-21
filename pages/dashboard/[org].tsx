@@ -67,7 +67,7 @@ export default function Home() {
             <div className="h-[90vh] flex flex-row w-screen">
               <Sidebar orgName={data.org.orgName} data={data.orgData.repos}/>
               <Mid data={data}/>
-              <Right orgName={data.org.orgName} orgDesc={data.org.orgDesc}/>
+              <Right orgName={data.org.orgName} orgDesc={data.org.orgDesc} orgLink={data.org.orgLink}/>
             </div>
           </div>
       } 
