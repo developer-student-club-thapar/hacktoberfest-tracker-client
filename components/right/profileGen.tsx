@@ -1,13 +1,10 @@
-import Image from "next/image";
-import hacktober from '../../public/hacktober.png';
-
 const ProfileCard= (props:any)=>{
     return(
         <div className=" flex flex-col justify-center items-center py-8 px-4 w-full
          bg-componentLight rounded-xl shadowProfile mb-2">
-            
+
             <div className="mb-4 ">
-                <Image className="rounded-full" src={hacktober} alt={'ok'} width={80}/>
+                <img className='rounded-full w-20' src={props.pic} alt={props.name} />
             </div>
 
             <div className="flex flex-col items-center">
