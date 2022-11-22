@@ -19,7 +19,8 @@ export default function Home() {
         org:{
           orgName:'',
           orgDesc:'',
-          orgLink:''
+          orgLink:'',
+          photo:' '
         },
         orgData:{
           commits:0,
