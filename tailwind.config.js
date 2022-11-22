@@ -16,6 +16,9 @@ module.exports = {
       contributorsDashNestedLight: '#5658A5',
       issuesLight: '#5B77A6'
     },
+    backgroundImage: {
+      'bg': "url('/public/bg.png')"
+    },
     fontFamily: {
       sans: ['Inter', 'sans-serif']
     },
