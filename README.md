@@ -1,4 +1,4 @@
-# Hacktoberfest Tracker-Backend
+# Hacktoberfest Tracker-Frontend
 
 ## About Project
 
