@@ -6,7 +6,10 @@ const Contributor= (props:any)=>{
             px-4 py-2 ">
                 <div className='flex flex-row items-center gap-2'>
                     <img className='rounded-full w-10' src={props.data.photo} alt={props.data.name} />
-                    <h3 className='text-sm text-left font-medium'>{props.data.name}</h3>
+                    <div className='text-left w-max'>
+                        <h3 className='text-sm font-medium'>{props.data.name}</h3>
+                        <p className='text-xs font-light'>{props.repo}</p>
+                    </div>
                 </div>
             <div className='flex flex-row bg-contributorsDashNestedLight rounded-2xl 
                 gap-2 h-fit px-2 py-1 justify-center items-center text-[#fff]'>
