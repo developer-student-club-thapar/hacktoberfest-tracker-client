@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import { useState } from "react";
-import Loading from "../components/loading";
+import Loading from "../src/components/loading";
 
 
 const Access = () => {

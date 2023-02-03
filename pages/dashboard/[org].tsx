@@ -1,10 +1,10 @@
-import Top from "../../components/top"
+import Top from "../../src/components/top"
 import { useRouter } from "next/router"
-import Right from "../../components/right/right"
-import Mid from"../../components/mid/mid";
+import Right from "../../src/components/right/right"
+import Mid from"../../src/components/mid/mid";
 import { useEffect, useState } from "react"
-import Sidebar from "../../components/sidebar/sidebarWrapper"
-import Loading from "../../components/loading"
+import Sidebar from "../../src/components/sidebar/sidebarWrapper"
+import Loading from "../../src/components/loading"
 
 
 export default function Home() {
