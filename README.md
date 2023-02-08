@@ -15,7 +15,7 @@ The web-app is planned to be developed in MERN stack (using Typescript).<br>
 
 <div align="center">
 
-<img height=500px src="./assets/infoarch.png"><br>
+<img height=500px src="./src/assets/infoarch.png"><br>
 
 The current plan for the project is defined through the information architecture - it represents the pages required to build the web-app and how the data is represented on a selected page.
 </div>
@@ -62,7 +62,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 <br>
 <div align="center">
 
-<img height="500px" src="./assets/lo-fi.png"><br>
+<img height="500px" src="./src/assets/lo-fi.png"><br>
 
 ### The design system and the low-fidelity prototype designed for the project can be found in the [Figma project](https://www.figma.com/file/wql8yk5cjh46zWVMCcEiCw/Hacktober?node-id=622%3A773).
 </div>
