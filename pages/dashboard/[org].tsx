@@ -18,8 +18,8 @@ export default function Home({data}:any) {
             <Top/>
             <div className="h-[90vh] flex flex-row w-screen justify-between">
               <Sidebar orgName={data.name} data={data.repos} setDisplayData={setPage}/>
-              {/* <Mid data={page?data:repoData} displayData={page}/> */}
-              {/* <Right orgName={data.org.orgName} orgDesc={data.org.orgDesc} orgPic={data.org.photo} orgLink={data.org.orgLink} contributors={data.orgData.repos}/> */}
+              <Mid data={data} displayData={page}/>
+              <Right orgName={data.name} orgDesc={data.desc} orgPic={data.avatar_url} orgLink={data.url} contributors={data.repos}/>
             </div>
           </div>
 

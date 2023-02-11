@@ -5,7 +5,7 @@ export default function Card(props:any) {
         <div className='w-[16vw] shadowProfile2 h-full rounded-lg bg-componentLight py-6 px-4 flex flex-col'>
             <div className='h-1/4 flex flex-row justify-between'>
                 <h1 className='text-xl font-semibold 2xl:text-2xl'>{props.name}</h1>
-                <a href={props.link} target="_blank"><AiOutlineLink size={26}/></a>
+                <a href={props.url} target="_blank"><AiOutlineLink size={26}/></a>
             </div>
             <div className='h-2/4 overflow-y-scroll mb-[6px]'><p className='text-[#8F8F8F] text-xs font-medium 2xl:text-sm'>{props.desc}</p></div>
             <div className='m-0 flex flex-row overflow-x-scroll gap-1 overflow-y-hidden'>
