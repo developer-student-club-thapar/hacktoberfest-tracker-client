@@ -3,7 +3,7 @@ module.exports = {
   content: [
     "./app/**/*.{js,ts,jsx,tsx}",
     "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
+    "./src/components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     colors:{
@@ -15,10 +15,7 @@ module.exports = {
       contributorsDashLight: '#ABACDC',
       contributorsDashNestedLight: '#5658A5',
       issuesLight: '#5B77A6'
-    },
-    backgroundImage: {
-      'bg': "url('/public/bg.png')"
-    },
+    }
   },
   plugins: [],
 }

@@ -29,9 +29,9 @@ const Sidebar = ({orgName,data,setDisplayData}:ComponentTypes) => {
     const u='bg-componentLight text-[#000] text-left text-xl w-full py-2 px-2 ';
 
     return (
-        <div className='h-full bg-componentLight flex flex-col py-7 shadowProfile rounded-xl '>
+        <div className='bg-componentLight flex flex-col py-5 shadowProfile rounded-lg'>
 
-            <h3 className="ml-1 mb-1 text-lg font-medium text-[#a3a3a3] 2xl:text-xl">Organisation</h3>
+            {/* <h3 className="ml-1 mb-1 text-lg font-medium text-[#a3a3a3] 2xl:text-xl">Organisation</h3> */}
             <button className={highlight.key == data.length+1?s:u} onClick={handleClick}>{orgName}</button>
 
             <h3 className="ml-1 mb-1 mt-4 text-lg font-medium text-[#a3a3a3] 2xl:text-xl">Repositories</h3>

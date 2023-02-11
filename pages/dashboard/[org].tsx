@@ -14,9 +14,9 @@ export default function Home({data}:any) {
 
   return (
     <div>
-          <div className="flex flex-col">
+          <div className="flex flex-col h-screen">
             <Top/>
-            <div className="h-[90vh] flex flex-row w-screen justify-between">
+            <div className="flex flex-row w-screen justify-between h-full py-2">
               <Sidebar orgName={data.name} data={data.repos} setDisplayData={setPage}/>
               {/* <Mid data={page?data:repoData} displayData={page}/> */}
               {/* <Right orgName={data.org.orgName} orgDesc={data.org.orgDesc} orgPic={data.org.photo} orgLink={data.org.orgLink} contributors={data.orgData.repos}/> */}
