@@ -1,13 +1,15 @@
 import { useState } from "react";
 import List from "./repoNavigation";
+import { reposType } from "../../types/repo";
 import PropTypes, {InferProps} from 'prop-types';
 
 const propTypes= {
     orgName:PropTypes.string,
-    data:PropTypes.array,
+    data:reposType,
     setDisplayData:PropTypes.func
 }
 type ComponentTypes = InferProps<typeof propTypes>;
+type reposType= InferProps<typeof reposType>;
 
 const Sidebar = ({orgName,data,setDisplayData}:ComponentTypes) => {
 
@@ -33,7 +35,7 @@ const Sidebar = ({orgName,data,setDisplayData}:ComponentTypes) => {
             <button className={highlight.key == data.length+1?s:u} onClick={handleClick}>{orgName}</button>
 
             <h3 className="ml-1 mb-1 mt-4 text-lg font-medium text-[#a3a3a3] 2xl:text-xl">Repositories</h3>
-            {data.map((repo:object,index:number) => {
+            {data.map((repo:reposType,index:number) => {
                     return (
                         <List name={repo.name} key={Math.random()} index={index} check={highlight} setCheck={setHighlight} setDisplayData={setDisplayData}/> 
                     );

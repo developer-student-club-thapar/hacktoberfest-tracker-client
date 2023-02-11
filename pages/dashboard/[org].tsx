@@ -3,15 +3,12 @@ import Right from "../../src/components/right/right"
 import Mid from"../../src/components/mid/mid";
 import { useState } from "react"
 import Sidebar from "../../src/components/sidebar/sidebarWrapper"
-
-// import { useRouter } from "next/router"
-// import Loading from "../../src/components/loading"
-
+import { useRouter } from "next/router"
 
 export default function Home({data}:any) {
 
-    // const router = useRouter();
-    // const [load,setLoading] = useState(true);
+    const router = useRouter();
+    const org= router.query;
     
     const [page,setPage] = useState(true);
 
@@ -33,7 +30,7 @@ export default function Home({data}:any) {
 }
 
 export async function getServerSideProps({params, req, res}:any) {
-  const url = `http://localhost:3000/api/${params.id}`;
+  const url = `http://localhost:3000/api/${params.org}`;
   const response = await fetch(url,{
     'method': 'GET',
     'headers': {

@@ -1,7 +1,7 @@
 import Image from 'next/image';
-import DSClight from '../public/DSClight.png';
-import hacktober from '../public/hacktober.png';
-import servatom from '../public/servatom.png';
+import DSClight from '../../public/DSClight.png';
+import hacktober from '../../public/hacktober.png';
+import servatom from '../../public/servatom.png';
 
 
 const Top= ()=>{

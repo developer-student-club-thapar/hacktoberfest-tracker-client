@@ -29,7 +29,7 @@ const Access = () => {
             return response.json()
         }).then((data) => {
             if(data.verifiedDB){
-                setIsLoadinng(true);
+                // setIsLoadinng(true);
                 router.push("/dashboard/"+username);
             } 
             else{
