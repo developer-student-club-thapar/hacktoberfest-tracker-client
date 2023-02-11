@@ -12,7 +12,7 @@ const OrgDash = (props:any) => {
                 <div className="flex flex-col gap-4 w-2/4 h-full">
                     <div className="bg-bgLight flex flex-col justify-center p-8 text-center rounded-lg h-2/4">
                         <h1 className="text-ChinaRoseLight font-semibold text-4xl 2xl:text-5xl">{props.contributors}</h1>
-                        <h1 className="text-2xl font-normal 2xl:text-3xl">Total Contributors</h1>
+                        <h1 className="text-2xl font-normal 2xl:text-3xl">Total PRs Open</h1>
                     </div>
                     <div className="flex flex-row gap-4 text-xl justify-evenly h-2/4">
 
