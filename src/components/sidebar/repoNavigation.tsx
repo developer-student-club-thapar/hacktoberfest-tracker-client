@@ -1,6 +1,17 @@
 import {useRouter} from "next/router"
+import PropTypes, {InferProps} from 'prop-types';
 
-const List = ({name,index,check,setCheck,setRepoData,setDisplayData}:any) => {
+const propTypes= {
+    name:PropTypes.string,
+    index:PropTypes.number,
+    check:PropTypes.bool,
+    setCheck:PropTypes.func,
+    setDisplayData:PropTypes.func
+}
+type ComponentTypes = InferProps<typeof propTypes>;
+
+
+const List = ({name,index,check,setCheck,setDisplayData}:ComponentTypes) => {
 
     const router = useRouter();
     const {org} = router.query

@@ -1,7 +1,15 @@
 import { useState } from "react";
 import List from "./repoNavigation";
+import PropTypes, {InferProps} from 'prop-types';
 
-const Sidebar = ({orgName,data,setRepoData,setDisplayData}:any) => {
+const propTypes= {
+    orgName:PropTypes.string,
+    data:PropTypes.array,
+    setDisplayData:PropTypes.func
+}
+type ComponentTypes = InferProps<typeof propTypes>;
+
+const Sidebar = ({orgName,data,setDisplayData}:ComponentTypes) => {
 
     const [highlight,setHighlight] = useState({
         key:data.length+1
@@ -25,9 +33,9 @@ const Sidebar = ({orgName,data,setRepoData,setDisplayData}:any) => {
             <button className={highlight.key == data.length+1?s:u} onClick={handleClick}>{orgName}</button>
 
             <h3 className="ml-1 mb-1 mt-4 text-lg font-medium text-[#a3a3a3] 2xl:text-xl">Repositories</h3>
-            {data.map((repo:any,index:number) => {
+            {data.map((repo:object,index:number) => {
                     return (
-                        <List name={repo.name} key={Math.random()} index={index} check={highlight} setCheck={setHighlight} setRepoData={setRepoData} setDisplayData={setDisplayData}/> 
+                        <List name={repo.name} key={Math.random()} index={index} check={highlight} setCheck={setHighlight} setDisplayData={setDisplayData}/> 
                     );
                 })
             }

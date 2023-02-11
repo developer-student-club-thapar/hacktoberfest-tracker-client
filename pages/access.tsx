@@ -7,7 +7,7 @@ import Loading from "../src/components/loading";
 const Access = () => {
 
     const [username,setUserName] = useState('');
-    const [notVerified,setVerified] = useState(false);
+    const [verified,setVerified] = useState(true);
     const router = useRouter();
     const [isLoading, setIsLoadinng] = useState(false)
 
@@ -19,20 +19,21 @@ const Access = () => {
     const handleSubmit = (e: React.MouseEvent<HTMLButtonElement, MouseEvent> /*{ preventDefault: () => void; }*/) => {
         e.preventDefault();
         setIsLoadinng(true);
-        fetch(`api/${username}`, {
+        fetch(`api/verify`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({username})
+            body: JSON.stringify({org:username})
         }).then((response) => {
             return response.json()
         }).then((data) => {
-            if(data.verified == true){
+            if(data.verifiedDB){
+                setIsLoadinng(true);
                 router.push("/dashboard/"+username);
             } 
             else{
-                setVerified(true);
+                setVerified(false);
             }
         })
     };
@@ -40,14 +41,11 @@ const Access = () => {
         <>
         {
             !isLoading?
-            <div className='h-screen w-screen bgok bg-fixed bg-center bg-no-repeat bg-cover'>
-                <div className="flex flex-col w-1/2 h-full px-4 justify-center items-center">
-                    
-                    <h1 className="text-4xl font-semibold text-[#fff] mb-8">Hacktoberfest Tracker</h1>
-                    
+            <div className='h-screen w-screen justify-center flex items-center'>
+                     
                     <div className='rounded-lg flex flex-col justify-center items-center py-6 w-1/2 shadowProfile bg-contributorsDashNestedLight'>
                         <label className="font-sans text-xl text-[#FFF]">Organization username</label>
-                        {notVerified?<p className="text-[#e11d48] mb-1">*User not found</p>:null}
+                        {!verified?<p className="text-[#e11d48] mb-1">*User not found</p>:null}
                         
                         <input className="bg-[#94a3b8] active-[#6366f1] rounded-lg px-2.5 py-1 text-[#e2e8f0] w-[15vw]" 
                             onChange={handleChange} name="username" value={username}/>
@@ -58,7 +56,6 @@ const Access = () => {
                             onClick={handleSubmit}>Submit</button>
                     </div>
                
-                </div>
             </div>
             :
             <Loading/>
